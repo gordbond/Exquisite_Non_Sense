@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "img"
+		},
+		{
+			"path": "css"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
+	}
+}

@@ -1,0 +1,76 @@
+<!-- IMPORTANT: CHANGE to index.html in exquisite corpse.js log out function too -->
+
+<!-- 
+    Final Project - "Exquisite Non-Sense"
+    Gord Bond, 000786196
+    I, Gord Bond, 000786196, certify that this material is my original work. 
+    No other person's work has been used without due acknowledgement.
+
+
+    Summary:
+
+    index.html is the landing page used for user login/registration.
+    It toggles between log in and registration using JavaScript from 
+    loginChange.js . 
+    index.html uses a POST method for its' form to prevent password 
+    data from being seen in the URL 
+
+ -->
+
+<!-- 
+    
+    
+    CHANGE LOG:
+    ---------------------------------
+    -Security: No client side check at log in for user
+
+    
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title>Login for Exquiste Corpse</title>
+        <link rel="stylesheet" href="css/stylesExCor.css">
+        <!-- Using bootstrap for login/registration form -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="loginChanges.js"></script>
+        
+    </head>
+
+    <body>
+        <div id="titleContainerLogin" class="titleContainer">
+            <img src="img/ExquisiteNonSense1.png">
+        </div>
+        <!-- LOGIN FORM  -->
+        <div id="loginContainer">
+            <h2>Login:</h2>
+            <form method="POST" action="exquisiteCorpse.php" id="loginForm">
+                <label>User Name:</label>
+                <input type="text" id="userNameLog" name="userNameLog" class="form-control" required>
+                <label>Password:</label>
+                <input type="password" id="passwordLog" name="passwordLog" class="form-control" required>
+                <input type="submit" id="subButtonLog">
+            </form>
+            <p>Not already a user? <a id="clickToReg">Click here to register.</a></p>
+            <p id="msgLog"></p>
+        </div>
+        <!-- REGISTRATION FORM -->
+        <div id="regContainer">
+            <h2>Register:</h2>
+            <form  method="POST">
+                <label>User Name:</label>
+                <input type="text" id="userNameReg" class="form-control" required>
+                <label>Password:</label>
+                <input type="password" id="passwordReg1" class="form-control" required>
+                <label>Re-enter password:</label>
+                <input type="password" id="passwordReg2" class="form-control" required>
+                <input type="submit" id="subButtonReg" disabled="true">
+            </form>
+            <p><a id="backToLoginButton">Back to Log-In Page.</a></p>
+            <p id="msg"></p>
+        </div>
+    </body>
+
+</html>

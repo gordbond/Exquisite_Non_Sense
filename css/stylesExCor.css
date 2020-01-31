@@ -1,0 +1,421 @@
+/* 
+    Final Project - "Exquisite Non-Sense"
+    Gord Bond, 000786196
+    I, Gord Bond, 000786196, certify that this material is my original work. 
+    No other person's work has been used without due acknowledgement.
+
+    Summary:
+    CSS stylesheet for index.html and exquisiteCorpse.php
+    Media Queries are at the bottom of the file for different sized devices
+
+*/
+
+/* ------------------INDEX PAGE-------------------------- */
+
+input[type=button], input[type=submit]{
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ed3330;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+}
+
+#subButtonLog:hover{
+    cursor: pointer;
+}
+
+input[type=submit]{
+    margin-bottom: 5px;
+}
+
+
+#loginContainer, #regContainer{
+    border: 2px solid black;
+    height: 430px;
+    width: 300px;
+    border-radius: 25px;
+    padding: 20px;
+    margin:auto;
+    margin-top: 20px;
+}
+
+#loginContainer label, #regContainer label{
+    display: block;
+    text-align: center;
+}
+
+#loginContainer input, #regContainer input{
+    text-align: center;
+}
+
+#clickToReg{
+    text-decoration: underline;   
+}
+
+#clickToReg:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#regContainer{
+    display: none;
+    height: 480px;
+}
+
+#regContainer:hover{
+    cursor: pointer;
+}
+
+#msgLog{
+    color:red;
+}
+
+#msg{
+    padding-top: 0px;
+}
+
+#backToLoginButton{
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
+
+#invalidLogin{
+    text-decoration: none;
+    width: 300px;
+    margin-left: 30px;
+    
+    word-wrap: normal;
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: red;
+}
+
+#invalidLoginContainer{
+    margin: auto;
+    margin-top: 40px;
+    width:350px;
+}
+
+#invalidTitleContainer{
+       margin-left:0px;
+       margin: auto;
+       margin-top: 40px; 
+}
+
+#titleContainerLogin{
+    margin:auto;
+}
+
+#titleContainerLogin img{
+    margin-top: 40px;
+}
+
+/* ------------------EXQUISITE CORPSE PAGE-------------------------- */
+
+
+/* -------------CONTAINERS--------------- */
+#container{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.drawingContainer{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;   
+    align-self: center;
+}
+
+#headContainer{
+    margin-bottom: -4px;
+}
+
+#bodyContainer{
+    margin-bottom: -4px;
+}
+
+#fullDrawingContainer{
+    display: none;
+    margin: auto;
+    width: 80%;
+    min-width: 300px;
+}
+
+#instructionsContainer{
+    width: 300px;
+    margin: auto;
+    word-wrap: normal;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+
+.drawingContainer:hover{
+    cursor: pointer;
+}
+
+
+#clickHereContainer:hover{
+    cursor: pointer;
+}
+
+#clickHere{
+    width: 100%;
+}
+
+#clickHereContainer{
+    width: 350px;
+}
+
+.titleContainer img{
+    width:100%;
+}
+
+.titleContainer{
+    width:300px;
+    margin:auto;
+    margin-top:40px;
+    margin-bottom: 50px;
+    
+}
+
+/* ---------------------------DRAWINGS--------------- */
+.drawing{
+    width: 100%;
+}
+
+/* ---------------------------BUTTONS--------------- */
+
+#saveButtonContainer, #logOutButtonContainer{
+    float: right;
+    width:120px;
+}
+
+
+#randButtonContainer, #loadButtonContainer{
+    display: inline;
+    float: left;
+    clear: both;
+    width:120px;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.button:active{
+    transform: translateY(4px);
+}
+
+
+/* ---------------------------MEDIA QUERIES FOR DIFFERENT SIZED DEVICES ---------------------*/
+
+ /* Small devices (landscape phones, 376px and up) */
+@media (min-width: 376px) { 
+    #container{
+        display: block;
+        flex-wrap: none; 
+    }
+    
+    #drawingContainer{
+        display: block;
+    }
+
+    .titleContainer{
+        width:300px;
+        margin:auto; 
+        margin-top:40px;
+        margin-bottom: 50px;
+        
+    }
+
+    #fullDrawingContainer{
+        /* display: none;
+        
+        margin: auto;
+        width: 75%;
+        min-width: 300px;
+        max-height: 100vh; */
+        display: none;
+        margin: auto;
+        width: 25%;
+        min-width: 300px;
+        margin-top: 50px;
+        height: 300px;
+    }
+
+    #clickHereContainer{
+        width: 300px;
+        margin: auto;
+        word-wrap: normal;
+        margin-top: 200px;
+    }
+
+    #instructionsContainer{
+        width: 300px;
+        margin: 0;
+        margin-left: 8%;
+        word-wrap: normal;
+        margin-top: 120px;
+        display: none;
+    }
+
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #container{
+        display: block;
+        flex-wrap: none; 
+    }
+
+    #drawingContainer{
+        display: block;
+    }
+
+    .titleContainer{
+        width:300px;
+        margin:auto; 
+        margin-top:40px;
+        margin-bottom: 50px;
+    }
+
+    #fullDrawingContainer{
+        display: none;
+        margin: auto;
+        width: 25%;
+        min-width: 300px;
+        margin-top: 50px;
+    }
+
+    #clickHereContainer{
+        width: 300px;
+        margin: auto;
+        word-wrap: normal;
+    }
+
+    #instructionsContainer{
+        width: 300px;
+        margin: 0;
+        margin-left: 8%;
+        word-wrap: normal;
+        margin-top: 120px;
+        display: none;
+    }
+
+    
+
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    
+    #container{
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
+    #drawingContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .titleContainer{
+        width:300px;
+        margin: 0;
+        margin-top:40px;
+        margin-left: 7%;
+        margin-bottom: 50px;
+    }
+
+    #fullDrawingContainer{
+        display: none;
+        
+        margin: 0;
+        width: 28%;
+        min-width: 300px;
+        margin-top: 50px;
+        margin-left: 8%;
+    }
+
+    #clickHereContainer{
+        width: 300px;
+        margin: 0;
+        word-wrap: normal;
+        margin-left: 8%;
+    }
+
+    #instructionsContainer{
+        width: 300px;
+        margin: 0;
+        margin-left: 8%;
+        word-wrap: normal;
+        margin-top: 120px;
+        display: flex;
+    }
+
+ }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #container{
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    
+    #drawingContainer{
+        display: flex;
+        flex-wrap: wrap;
+    } 
+
+    .titleContainer{
+        width:300px;
+        margin: 0;
+        margin-top:40px;
+        margin-left: 7%;
+        margin-bottom: 50px;
+        
+    }
+
+    #fullDrawingContainer{
+        display: none;
+        margin: 0;
+        width: 28%;
+        min-width: 300px;
+        margin-top: 50px;
+        margin-left: 8%;
+    }
+
+    #clickHereContainer{
+        width: 300px;
+        margin: 0;
+        margin-left: 8%;
+        word-wrap: normal;
+        margin-top: 200px;
+    }
+
+    #instructionsContainer{
+        width: 300px;
+        margin: 0;
+        margin-left: 8%;
+        word-wrap: normal;
+        margin-top: 120px;
+        display: flex;
+    }
+
+    #backToLoginButton:hover{
+        cursor: pointer;
+    }
+
+}
