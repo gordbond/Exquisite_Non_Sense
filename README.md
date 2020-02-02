@@ -15,6 +15,6 @@ JavaScript, PHP, AJAX, HTML and CSS
 
 ## Author
 
-* **Gord Bond** - *2020* 
+* **Gord Bond** - *2019* 
 
 
